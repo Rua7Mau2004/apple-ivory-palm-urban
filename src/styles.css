@@ -1,0 +1,46 @@
+@import "@fontsource/outfit/latin-400.css";
+@import "@fontsource/outfit/latin-500.css";
+@import "@fontsource/outfit/latin-600.css";
+@import "@fontsource/outfit/latin-ext-400.css";
+@import "@fontsource/outfit/latin-ext-500.css";
+@import "@fontsource/outfit/latin-ext-600.css";
+@import "@fontsource/fraunces/latin-600.css";
+@import "@fontsource/fraunces/latin-ext-600.css";
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f3efe6;
+  --color-ink: #1c1915;
+  --color-muted: #6f675d;
+  --color-sheet: #fffdf8;
+  --color-line: #e3d8c8;
+  --color-cut: #c4452d;
+  --color-oncut: #fff8f5;
+  --font-display: "Fraunces", "Times New Roman", serif;
+  --font-sans: "Outfit", system-ui, sans-serif;
+  --radius-card: 1rem;
+}
+
+@layer base {
+  html {
+    background: var(--color-paper);
+    color: var(--color-ink);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled),
+  label:has(input[type="file"]) {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: var(--color-cut);
+    color: var(--color-oncut);
+  }
+}
